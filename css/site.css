@@ -61,12 +61,10 @@ main>.container {
     color: rgb(53, 53, 180);
 }
 .checklist >li i{
-    color: var(--secondary-color);
+    color: rgba(66, 165, 204, 0.979);
 }
 
-code[class*="language-"],
-        pre[class*="language-"] {
-            white-space: pre-wrap;
-            word-break: break-all;
-            word-wrap: break-word;
-            }
+.rewind{
+    color: rgb(19, 19, 194);
+    font-weight: 700;
+}
