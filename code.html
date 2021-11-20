@@ -37,7 +37,7 @@
                     <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Git Repo</a>
+                    <a class="nav-link" href="https://github.com/DENRIG777">Git Repo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link social" target="_blank" href="https://denniswhocodes.netlify.app/">About</a>
@@ -52,13 +52,49 @@
         <h2 class="border-1 border-bottom border-dark">The Code for Rewind.</h2>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
-                <pre class="line-numbers"><code class="language-javascript">
-                    // Call Hello World
-                    function HelloWorld() {
-                        alert("hello World");
-                    }
-                </code>
-                </pre>
+ <pre class="line-numbers"><code class="language-javascript">
+    //Get the string from the page
+    //Controller function
+    function getValue(){
+    
+        document.getElementById("alert").classList.add("invisible");
+    
+        let userString = document.getElementById("userString").value;
+    
+        let revString = reverseString(userString);
+    
+        displayString(revString);
+    }
+    
+    //Reverse the string
+    //logic function
+    function reverseString(userString){
+    
+        let revString = [];
+    
+    
+        //reverse a string using a for loop
+        for (let index = userString.length - 1 ; index >=  0; index--) {
+            revString += userString[index];
+        }
+    
+        return revString;
+    
+    }
+    
+    //Display the reversed string to the user 
+    //view function
+    function displayString(revString){
+    
+        // write the msg to the page
+        document.getElementById("msg").innerHTML = `Your string reversed is: 
+        ${revString}`;
+        // show the alert box
+        document.getElementById("alert").classList.remove("invisible");
+    
+    }
+</code>
+</pre>
             </div>
             <div class="col-lg-4">
                 <P>The code is structed in one function. </P>
